@@ -1,51 +1,42 @@
-/* 
-  * margin-top: 25 * n
-
-*/
 /* Import Font From Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Open+Sans:wght@300;400;700&family=Satisfy&family=`rk+Sans:ital,wght@0,200;0,400;0,500;0,600;0,700;0,800;1,300&family=Yellowtail&display=swap");
 
 /* Start Variables Section */
 :root {
-  --main-color: #ffc107;
-  --secondary-color-0: #f3f8f9;
-  --secondary-color-1: #c4ecff;
-  --secondary-color-2: #696f79;
-  --secondary-color-3: #607d8b;
-  --secondary-color-4: #bbc2cd;
-
-  --main-background-color: #222a35;
-  --secondary-background-color-1: #171e28;
-
-  --lr-p-padding: 30px;
-  --con-padding: 50px;
-  --center-margin: 0 auto;
-  --header-icon-dimension: 35px;
-
-  --copyright-color: #919191;
-  --copyright-background-color: #222a38;
+  --first-background-color: #222a35;
+  --second-background-color: #171e28;
+  --first-text-color: #696f79;
+  --second-text-color-white: #f3f8f9;
+    --center-margin: 0 auto;
 }
 /* End Variables Section */
 
 /* Start Global Rules Section */
 * {
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   transition: 0.4s;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Open Sans", sans-serif;
-  background-color: var(--main-background-color);
+  background-color: var(--first-background-color);
   height: 100vh;
 }
 a {
   text-decoration: none;
-  color: var(--main-color);
+  color: #ffc107;
 }
 .container {
-  padding: 0 var(--lr-p-padding);
-  margin: var(--center-margin);
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-left: auto;
+  margin-right: auto;
   width: 600px;
 }
 @media (min-width: 768px) {
@@ -53,6 +44,7 @@ a {
     width: 750px;
   }
 }
+/* Medium Screen */
 @media (min-width: 992px) {
   .container {
     width: 970px;
@@ -68,16 +60,22 @@ a {
     width: 1500px;
   }
 }
+/* End Global Rules Section */
+
+/* Start Header Section */
+header {
+  /* background-color: var(--first-background-color); */
+}
 header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: var(--center-margin);
-  padding: var(--con-padding);
+  padding: 50px;
 }
 header section.menu-bars {
-  width: var(--header-icon-dimension);
-  height: var(--header-icon-dimension);
+  width: 35px;
+  height: 35px;
   cursor: pointer;
   display: flex;
   flex-wrap: wrap;
@@ -85,32 +83,14 @@ header section.menu-bars {
 header section.menu-bars span {
   width: 100%;
   height: 3px;
-  background-color: var(--secondary-color-4);
+  background-color: #bbc2cd;
 }
 header i.adjust {
-  color: var(--secondary-color-4);
-  font-size: var(--header-icon-dimension);
+  color: #9ca2ae;
+  font-size: 35px;
   cursor: pointer;
 }
-.h2 {
-  font-family: "Satisfy", cursive;
-  color: var(--main-color);
-  font-size: 70px;
-}
-.p {
-  color: var(--secondary-color-0);
-  font-size: 30px;
-}
-footer.copyright {
-  text-align: center;
-  font-size: 25px;
-  color: var(--copyright-color);
-  padding: 25px 5px;
-  background-color: var(--copyright-background-color);
-}
-/* End Global Rules Section */
-
-/* ***********************  Now We Will Go To Home Page  ************************/
+/* End Header Section */
 
 /* Start Figure Section */
 figure.container {
@@ -132,14 +112,15 @@ figure.container img {
 
 /* Start main section */
 main {
-  margin-top: -30px !important;
+  margin-top: -25px;
   display: flex;
   gap: 10vh;
   flex-direction: column;
+  /* position: relative; */
 }
 main section.right-side h3 {
   text-align: center;
-  color: var(--secondary-color-3);
+  color: #607d8b;
   font-size: 36px;
   letter-spacing: 19px;
   margin-top: 200px;
@@ -147,7 +128,7 @@ main section.right-side h3 {
 main section.right-side h3 span#owner {
   font-family: "Satisfy", cursive;
   display: block;
-  color: var(--main-color);
+  color: #ffc107;
   font-size: 90px;
   letter-spacing: 0px;
   margin: -150px 15px 0 0;
@@ -161,16 +142,16 @@ main section.right-side h3 span#owner {
   }
 }
 main section.left-side {
-  border-left: 1px solid var(--secondary-color-2);
+  border-left: 1px solid var(--first-text-color);
   padding: 20px;
 }
 main section.left-side p {
-  color: var(--secondary-color-1);
+  color: #c4ecff;
   font-size: 28px;
   line-height: 1.8;
 }
 main section.left-side section.contact-icons i {
-  color: var(--secondary-color-2);
+  color: var(--first-text-color);
   font-size: 40px;
   margin: 26px 0 10px 30px;
   text-align: center;
@@ -211,12 +192,12 @@ footer nav {
 }
 footer nav a {
   display: inline-block;
-  border: 1px solid var(--main-color);
+  border: 1px solid #ffc107;
   font-size: 30px;
   padding: 20px 45px;
   border-radius: 25px;
-  /* background-color: #222635e0; */
-  background-color: var(--secondary-background-color-1);
+  background-color: #222635e0;
+  /* transition: 0.4s; */
   width: 250px;
   text-align: center;
   margin-bottom: 25px;
@@ -229,13 +210,13 @@ footer nav a:hover {
 }
 /* End Footer Section */
 
+/* ***********************  Now We Will Go To About Page  ************************/
+
 main.about-main article {
   margin-top: 45px;
   display: flex;
   flex-direction: column;
   gap: 3vh;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
 }
 @media (min-width: 1200px) {
@@ -244,30 +225,148 @@ main.about-main article {
     width: 900px;
   }
 }
+.h2 {
+  font-family: "Satisfy", cursive;
+  color: #ffc107;
+  font-size: 70px;
+}
 main.about-main article p span:hover {
   display: inline-block;
   transform: scale(1.2);
-  color: #ff5722; /*Palestine color => just in about section*/
+  color: #ff5722;
+}
+.p {
+  color: var(--second-text-color-white);
+  font-size: 30px;
 }
 main.about-main article a {
+  color: #ffc107;
   font-size: 36px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
   padding: 5px 20px;
 }
 main.about-main article a:hover {
+  /* padding-left: 45px; */
+  /* font-size: 40px; */
   transform: scale(1.2) translateX(25px);
+}
+footer.copyright {
+  text-align: center;
+  font-size: 25px;
+  /* margin-top: 5px; */
+  color: #919191;
+  padding: 25px 5px;
+  background-color: #222a38;
+}
+
+/* ***********************  Now We Will Go To Contact Page  ************************/
+main.contact-main {
+  gap: 5vh;
+}
+main.contact-main .contact-text {
+  text-align: center;
+  margin-top: 4rem;
+}
+main.contact-main .contact-text p {
+  padding: 30px;
+}
+main.contact-main form {
+  display: flex;
+  flex-direction: column;
+  gap: 4vh;
+  align-items: center;
+  margin-bottom: 70px;
+}
+main.contact-main form input,
+textarea {
+  display: block;
+  height: 10vh;
+  width: 90%;
+  padding: 4vw;
+  border: none;
+  background-color: var(--first-text-color);
+  color: var(--second-text-color-white);
+  border-radius: 1vh;
+  font-size: 1.1rem;
+}
+::placeholder {
+  color: var(--second-text-color-white);
+}
+main.contact-main form input:hover,
+textarea:hover {
+  transform: scale(1.1);
+}
+main.contact-main form input:focus,
+textarea:focus {
+  outline: none;
+  background-color: #ffc107;
+  color: var(--second-background-color);
+  transform: scale(1.2);
+  font-size: 1.3rem;
+}
+main.contact-main form textarea {
+  flex-basis: 20vh;
+}
+main.contact-main form input[type="submit"] {
+  width: 50%;
+  cursor: pointer;
+  font-size: 1.8em;
+  color: white;
+}
+main.contact-main form input[type="submit"]:hover {
+  color: var(--first-background-color);
+  background-color: #ffc107;
+  transform: scale(1.2);
+}
+main.contact-main form input[type="submit"]:focus {
+  color: white;
+  transform: scale(1.3);
+}
+
+@media (min-width: 1200px) {
+  main.contact-main,
+  .contact-main form {
+    gap: 2vh !important;
+  }
+  main.contact-main .contact-text {
+    margin: -1rem;
+  }
+  main.contact-main form input,
+  textarea {
+    /* display: block; */
+    height: 5vh;
+    width: 45vw;
+    padding: 2vw;
+    /* border: none; */
+    /* background-color: var(--first-text-color); */
+    /* color: var(--second-text-color-white); */
+    /* border-radius: 5px; */
+    /* font-size: 1.1rem; */
+  }
+  main.contact-main form input[type="submit"] {
+    width: 15vw;
+    cursor: pointer;
+    line-height: 0.2;
+    color: #ffc107;
+    font-size: 1.3em;
+    font-weight: 700;
+    background-color: #171e28;
+    transform: scale(1.1);
+  }
+  footer.footer-copyright {
+    margin-top: -20px !important ;
+  }
 }
 
 /* ***********************  Now We Will Go To Skills Page  ************************/
 
+.skills-main {
   display: block;
   text-align: center;
-  padding: 0 var(--con-padding);
+  padding: 0 50px;
 }
 .skills-main p {
-  padding: var(--lr-p-padding);
+  padding: 30px;
 }
 .skills-main .skills-content {
   text-align: left;
@@ -303,6 +402,7 @@ main.about-main article a:hover {
 .skills-main .skills-content .skill-block > h5.debug {
   color: #0bae0b;
 }
+
 .skills-main .skills-content .skill-block > section {
   width: 40vw;
   height: 2px;
@@ -322,7 +422,7 @@ main.about-main article a:hover {
   height: 2rem;
   width: 2rem;
   border-radius: 50%;
-  background-color: var(--main-color);
+  background-color: #ffc107;
 }
 .skills-main .skills-content .skill-block > section > span::after {
   content: attr(level);
@@ -335,6 +435,7 @@ main.about-main article a:hover {
   font-size: 1.5em;
   font-weight: bold;
   text-align: center;
+  background-color: white;
   display: none;
 }
 .skills-main .skills-content .skill-block:hover > section > span::after {
@@ -376,11 +477,7 @@ span.debug {
   .skills-main .skills-content .skill-block > section {
     width: 80vw;
   }
-  .skills-main .skills-content .skill-block > section > span::after {
-<<<<<<< HEAD
-=======
   .skills-main .skills-content .skill-block > section > span::after{
->>>>>>> main
     width: 8vw;
   }
 }
@@ -388,107 +485,129 @@ span.debug {
   margin-top: 9vh;
 }
 
-/* ***********************  Now We Will Go To Contact Page  ************************/
+/* ***********************  Now We Will Go To Skills Page  ************************/
 
-main.contact-main {
-  gap: 5vh;
-}
-main.contact-main .contact-text {
-  text-align: center;
-  margin-top: 4rem;
-}
-main.contact-main .contact-text p {
-  padding: var(--lr-p-padding);
-}
-main.contact-main form {
-  display: flex;
-  flex-direction: column;
-  gap: 4vh;
-  align-items: center;
-  margin-bottom: 70px;
-}
-main.contact-main form input,
-textarea {
+.skills-main {
   display: block;
-  height: 10vh;
-  width: 90%;
-  padding: 4vw;
-  border: none;
-  background-color: var(--first-text-color);
-  color: var(--second-text-color-white);
-  border-radius: 1vh;
-  font-size: 1.1rem;
+  text-align: center;
+  padding: 0 50px;
 }
-::-webkit-input-placeholder {
-  color: var(--secondary-color-0, white);
+.skills-main p {
+  padding: 30px;
 }
-::-moz-placeholder {
-  color: var(--secondary-color-0, white);
+.skills-main .skills-content {
+  text-align: left;
+  margin-top: 2vh;
 }
-:-ms-input-placeholder {
-  color: var(--secondary-color-0, white);
+.skills-main .skills-content .skill-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-::-ms-input-placeholder {
-  color: var(--secondary-color-0, white);
+.skills-main .skills-content .skill-block > h5 {
+  font-size: 2rem;
+  margin: 1vh 0;
 }
-::placeholder {
-  color: var(--secondary-color-0, white);
+.skills-main .skills-content .skill-block > h5.html {
+  color: #7676ea;
 }
-main.contact-main form input:hover,
-textarea:hover {
-  transform: scale(1.1);
+.skills-main .skills-content .skill-block > h5.javascript {
+  color: yellow;
 }
-main.contact-main form input:focus,
-textarea:focus {
-  outline: none;
-  background-color: var(--secondary-background-color-1);
-  color: var(--second-background-color);
-  transform: scale(1.2);
-  font-size: 1.3rem;
+.skills-main .skills-content .skill-block > h5.dom {
+  color: orange;
 }
-main.contact-main form textarea {
-  flex-basis: 20vh;
+.skills-main .skills-content .skill-block > h5.git {
+  color: #a69595;
 }
-main.contact-main form input[type="submit"] {
-  width: 50%;
-  cursor: pointer;
-  font-size: 1.8em;
-  color: var(--main-color);
-  background-color: var(--secondary-background-color-1);
+.skills-main .skills-content .skill-block > h5.tool {
+  color: wheat;
+}
+.skills-main .skills-content .skill-block > h5.cmd {
+  color: #01beac;
+}
+.skills-main .skills-content .skill-block > h5.debug {
+  color: #0bae0b;
 }
 
-main.contact-main form input[type="submit"]:hover {
-  color: var(--main-background-color);
-  background-color: var(--main-color);
-  transform: scale(1.2);
+.skills-main .skills-content .skill-block > section {
+  width: 40vw;
+  height: 2px;
+  background-color: #fff;
+  margin: 2rem 0;
 }
-main.contact-main form input[type="submit"]:focus {
-  color: white;
-  transform: scale(1.3);
+.skills-main .skills-content .skill-block > section > span {
+  display: block;
+  height: inherit;
+  position: relative;
 }
-
-@media (min-width: 1200px) {
-  main.contact-main,
-  .contact-main form {
-    gap: 2vh !important;
+.skills-main .skills-content .skill-block > section > span::before {
+  content: "";
+  position: absolute;
+  right: -1rem;
+  top: -1rem;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  background-color: #ffc107;
+}
+.skills-main .skills-content .skill-block > section > span::after {
+  content: attr(level);
+  position: absolute;
+  top: -1rem;
+  height: 2rem;
+  width: 4vw;
+  border-radius: 5px;
+  padding: 1px;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  background-color: white;
+  display: none;
+}
+.skills-main .skills-content .skill-block:hover > section > span::after {
+  display: block;
+}
+.skills-main .skills-content .skill-block span.html::after,
+span.html {
+  background-color: #7676ea;
+}
+.skills-main .skills-content .skill-block span.javascript::after,
+span.javascript {
+  background-color: yellow;
+}
+.skills-main .skills-content .skill-block span.dom::after,
+span.dom {
+  background-color: orange;
+}
+.skills-main .skills-content .skill-block span.git::after,
+span.git {
+  background-color: #a69595;
+}
+.skills-main .skills-content .skill-block span.tool::after,
+span.tool {
+  background-color: wheat;
+}
+.skills-main .skills-content .skill-block span.cmd::after,
+span.cmd {
+  background-color: #01beac;
+}
+.skills-main .skills-content .skill-block span.debug::after,
+span.debug {
+  background-color: #0bae0b;
+}
+@media (max-width: 992px) {
+  .skills-main .skills-content .skill-block {
+    flex-direction: column;
+    margin: 5vh 0;
   }
-  main.contact-main .contact-text {
-    margin: -1rem;
+  .skills-main .skills-content .skill-block > section {
+    width: 80vw;
   }
-  main.contact-main form input,
-  textarea {
-    height: 5vh;
-    width: 45vw;
-    padding: 2vw;
+  .skills-main .skills-content .skill-block > section > span::after{
+    width: 8vw;
   }
-  main.contact-main form input[type="submit"] {
-    width: 15vw;
-    line-height: 0.2;
-    font-size: 1.3em;
-    font-weight: 700;
-    transform: scale(1.1);
-  }
-  footer.footer-copyright {
-    margin-top: -20px !important ;
-  }
+}
+.skill-footer {
+  margin-top: 9vh;
 }
