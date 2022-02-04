@@ -229,8 +229,6 @@ footer nav a:hover {
 }
 /* End Footer Section */
 
-/* ***********************  Now We Will Go To About Page  ************************/
-
 main.about-main article {
   margin-top: 45px;
   display: flex;
@@ -264,7 +262,6 @@ main.about-main article a:hover {
 
 /* ***********************  Now We Will Go To Skills Page  ************************/
 
-.skills-main {
   display: block;
   text-align: center;
   padding: 0 var(--con-padding);
@@ -380,6 +377,10 @@ span.debug {
     width: 80vw;
   }
   .skills-main .skills-content .skill-block > section > span::after {
+<<<<<<< HEAD
+=======
+  .skills-main .skills-content .skill-block > section > span::after{
+>>>>>>> main
     width: 8vw;
   }
 }
